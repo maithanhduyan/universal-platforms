@@ -82,6 +82,19 @@
 			<artifactId>icheck-bootstrap</artifactId>
 			<version>3.0.1</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars.npm/aos -->
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>aos</artifactId>
+			<version>2.1.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars.npm/jquery.easing -->
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>jquery.easing</artifactId>
+			<version>1.4.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
