@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{thymeleaf/layouts/app :: main-layout(  
+                                                ~{::title},
+                                                ~{:: #styles},
+                                                ~{:: #mainContent},
+                                                ~{:: #scripts}
+                                               )}">
+
+<head>
+    <title>About</title>
+    <th:block id="styles">
+        <style></style>
+    </th:block>
+</head>
+
+<body>
+    <th:block id="mainContent">
+        Services
+    </th:block>
+
+    <th:block id="scripts">
+        <script>
+
+        </script>
+    </th:block>
+</body>
+
+</html>
