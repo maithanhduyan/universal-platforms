@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.shop.core.entities.Product;
 
 @Service
 public interface ProductService {
-    public List<com.shop.core.entities.Product> getAll();
+    public List<Product> getAll();
 }

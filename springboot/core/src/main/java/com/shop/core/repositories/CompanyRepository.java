@@ -14,6 +14,6 @@ import com.shop.core.entities.Company;
 @Repository
 public interface CompanyRepository extends JpaRepository<Company, String> {
 
-    @Query("SELECT c FROM Company c WHERE c.active = 1 ")
+    @Query("SELECT c FROM Company c WHERE c.active = 1")
     public Company getFirst();
 }
