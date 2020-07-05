@@ -13,19 +13,30 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "customer_group")
-public class CustomerGroup {
+@Table(name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "username"))
+public class User {
     @Id
     @Column(name = "id")
     private String id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "username")
+    private String username;
 
-    @Column(name = "description")
-    private String description;
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "email_verified_at")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date emailVerifiedAt;
+
+    @Column(name = "role_id")
+    private String role;
 
     @Column(name = "active")
     private int active;
@@ -44,7 +55,7 @@ public class CustomerGroup {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedDate;
 
-    public CustomerGroup() {
+    public User() {
     }
 
     /**
@@ -62,31 +73,73 @@ public class CustomerGroup {
     }
 
     /**
-     * @return the name
+     * @return the username
      */
-    public String getName() {
-	return name;
+    public String getUsername() {
+	return username;
     }
 
     /**
-     * @param name the name to set
+     * @param username the username to set
      */
-    public void setName(String name) {
-	this.name = name;
+    public void setUsername(String username) {
+	this.username = username;
     }
 
     /**
-     * @return the description
+     * @return the password
      */
-    public String getDescription() {
-	return description;
+    public String getPassword() {
+	return password;
     }
 
     /**
-     * @param description the description to set
+     * @param password the password to set
      */
-    public void setDescription(String description) {
-	this.description = description;
+    public void setPassword(String password) {
+	this.password = password;
+    }
+
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+	return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+	this.email = email;
+    }
+
+    /**
+     * @return the emailVerifiedAt
+     */
+    public Date getEmailVerifiedAt() {
+	return emailVerifiedAt;
+    }
+
+    /**
+     * @param emailVerifiedAt the emailVerifiedAt to set
+     */
+    public void setEmailVerifiedAt(Date emailVerifiedAt) {
+	this.emailVerifiedAt = emailVerifiedAt;
+    }
+
+    /**
+     * @return the role
+     */
+    public String getRole() {
+	return role;
+    }
+
+    /**
+     * @param role the role to set
+     */
+    public void setRole(String role) {
+	this.role = role;
     }
 
     /**
@@ -161,9 +214,10 @@ public class CustomerGroup {
 
     @Override
     public String toString() {
-	return "CustomerGroup [id=" + id + ", name=" + name + ", description=" + description + ", active=" + active
-		+ ", createdBy=" + createdBy + ", updatedBy=" + updatedBy + ", createdDate=" + createdDate
-		+ ", updatedDate=" + updatedDate + "]";
+	return "User [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email
+		+ ", emailVerifiedAt=" + emailVerifiedAt + ", role=" + role + ", active=" + active + ", createdBy="
+		+ createdBy + ", updatedBy=" + updatedBy + ", createdDate=" + createdDate + ", updatedDate="
+		+ updatedDate + "]";
     }
 
 }

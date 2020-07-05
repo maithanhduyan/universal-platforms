@@ -13,19 +13,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "customer_group")
-public class CustomerGroup {
+@Table(name = "role", uniqueConstraints = @UniqueConstraint(columnNames = "name"))
+public class Role {
+
     @Id
     @Column(name = "id")
     private String id;
 
     @Column(name = "name")
     private String name;
-
-    @Column(name = "description")
-    private String description;
 
     @Column(name = "active")
     private int active;
@@ -44,7 +43,7 @@ public class CustomerGroup {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedDate;
 
-    public CustomerGroup() {
+    public Role() {
     }
 
     /**
@@ -73,20 +72,6 @@ public class CustomerGroup {
      */
     public void setName(String name) {
 	this.name = name;
-    }
-
-    /**
-     * @return the description
-     */
-    public String getDescription() {
-	return description;
-    }
-
-    /**
-     * @param description the description to set
-     */
-    public void setDescription(String description) {
-	this.description = description;
     }
 
     /**
@@ -161,9 +146,8 @@ public class CustomerGroup {
 
     @Override
     public String toString() {
-	return "CustomerGroup [id=" + id + ", name=" + name + ", description=" + description + ", active=" + active
-		+ ", createdBy=" + createdBy + ", updatedBy=" + updatedBy + ", createdDate=" + createdDate
-		+ ", updatedDate=" + updatedDate + "]";
+	return "Role [id=" + id + ", name=" + name + ", active=" + active + ", createdBy=" + createdBy + ", updatedBy="
+		+ updatedBy + ", createdDate=" + createdDate + ", updatedDate=" + updatedDate + "]";
     }
 
 }
