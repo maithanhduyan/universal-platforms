@@ -3,7 +3,7 @@
  * 
  * https://github.com/maithanhduyan/universal-platforms
  */
-package com.shop.entity;
+package com.shop.core.entities;
 
 import java.util.Date;
 

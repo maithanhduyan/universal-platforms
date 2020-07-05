@@ -3,53 +3,33 @@
  * 
  * https://github.com/maithanhduyan/universal-platforms
  */
-package com.shop.entity;
+package com.shop.core.entities;
 
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 @Entity
-@Table(name = "product")
-public class Product {
+@Table(name = "product_category")
+public class ProductCategory {
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     private String id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "code")
-    private String code;
-
-    @Column(name = "cost_price")
-    private int costPrice;
-
-    @Column(name = "sale_price")
-    private int salePrice;
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "active")
     private int active;
-
-    @Column(name = "in_stock")
-    private int inStock;
-
-    @ManyToOne(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-    @JoinColumn(name = "category_id", nullable = true)
-    private ProductCategory category;
-
-//    @ManyToOne(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "unit_id")
-//    private ProductUnit productUnit;
 
     @Column(name = "created_by")
     private String createdBy;
@@ -64,8 +44,11 @@ public class Product {
     @Column(name = "updated_at")
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedDate;
+
+    @Transient
+    private int numberProducts = 0;
     
-    public Product() {}
+    public ProductCategory() {}
 
     /**
      * @return the id
@@ -96,45 +79,17 @@ public class Product {
     }
 
     /**
-     * @return the code
+     * @return the description
      */
-    public String getCode() {
-        return code;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * @param code the code to set
+     * @param description the description to set
      */
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    /**
-     * @return the costPrice
-     */
-    public int getCostPrice() {
-        return costPrice;
-    }
-
-    /**
-     * @param costPrice the costPrice to set
-     */
-    public void setCostPrice(int costPrice) {
-        this.costPrice = costPrice;
-    }
-
-    /**
-     * @return the salePrice
-     */
-    public int getSalePrice() {
-        return salePrice;
-    }
-
-    /**
-     * @param salePrice the salePrice to set
-     */
-    public void setSalePrice(int salePrice) {
-        this.salePrice = salePrice;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
@@ -150,48 +105,6 @@ public class Product {
     public void setActive(int active) {
         this.active = active;
     }
-
-    /**
-     * @return the inStock
-     */
-    public int getInStock() {
-        return inStock;
-    }
-
-    /**
-     * @param inStock the inStock to set
-     */
-    public void setInStock(int inStock) {
-        this.inStock = inStock;
-    }
-
-    /**
-     * @return the category
-     */
-    public ProductCategory getCategory() {
-        return category;
-    }
-
-    /**
-     * @param category the category to set
-     */
-    public void setCategory(ProductCategory category) {
-        this.category = category;
-    }
-
-    /**
-     * @return the productUnit
-     */
-//    public ProductUnit getProductUnit() {
-//        return productUnit;
-//    }
-
-    /**
-     * @param productUnit the productUnit to set
-     */
-//    public void setProductUnit(ProductUnit productUnit) {
-//        this.productUnit = productUnit;
-//    }
 
     /**
      * @return the createdBy
@@ -249,12 +162,25 @@ public class Product {
         this.updatedDate = updatedDate;
     }
 
+    /**
+     * @return the numberProducts
+     */
+    public int getNumberProducts() {
+        return numberProducts;
+    }
+
+    /**
+     * @param numberProducts the numberProducts to set
+     */
+    public void setNumberProducts(int numberProducts) {
+        this.numberProducts = numberProducts;
+    }
+
     @Override
     public String toString() {
-	return "Product [id=" + id + ", name=" + name + ", code=" + code + ", costPrice=" + costPrice + ", salePrice="
-		+ salePrice + ", active=" + active + ", inStock=" + inStock + ", category=" + category
-		+ ", productUnit="  + ", createdBy=" + createdBy + ", updatedBy=" + updatedBy
-		+ ", createdDate=" + createdDate + ", updatedDate=" + updatedDate + "]";
+	return "ProductCategory [id=" + id + ", name=" + name + ", description=" + description + ", active=" + active
+		+ ", createdBy=" + createdBy + ", updatedBy=" + updatedBy + ", createdDate=" + createdDate
+		+ ", updatedDate=" + updatedDate + ", numberProducts=" + numberProducts + "]";
     }
     
     

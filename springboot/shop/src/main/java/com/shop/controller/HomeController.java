@@ -11,18 +11,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.shop.service.ProductServiceImpl;
+import com.shop.core.services.ProductService;
+
 
 @Controller
 public class HomeController {
     
     @Autowired
-    ProductServiceImpl productServiceImpl;
+    ProductService productService;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String viewHomePage(Model model) {
         model.addAttribute("title", "Welcome");
-        model.addAttribute("productList", productServiceImpl.getAll());
+        model.addAttribute("productList", productService.getAll());
         return "thymeleaf/index";
     }
 

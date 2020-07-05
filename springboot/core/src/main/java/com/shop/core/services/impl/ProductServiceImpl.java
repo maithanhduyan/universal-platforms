@@ -1,17 +1,13 @@
-/**
- * @author Mai Thành Duy An [tiachop0102@gmail.com]
- * 
- * https://github.com/maithanhduyan/universal-platforms
- */
-package com.shop.service;
+package com.shop.core.services.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shop.entity.Product;
-import com.shop.repository.ProductRepository;
+import com.shop.core.entities.Product;
+import com.shop.core.repositories.ProductRepository;
+import com.shop.core.services.ProductService;
 
 @Service
 public class ProductServiceImpl implements ProductService{
@@ -23,5 +19,4 @@ public class ProductServiceImpl implements ProductService{
     public List<Product> getAll() {
 	return productRepository.findAll();
     }
-
 }

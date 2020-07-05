@@ -1,0 +1,1 @@
+package com.shop.core;
