@@ -13,7 +13,8 @@
 	<artifactId>shop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>shop</name>
-	<description>Shopping App</description>
+	<description>Shopping Web App</description>
+	<url>https://github.com/maithanhduyan/universal-platforms/tree/master/springboot</url>
 
 	<properties>
 		<java.version>1.8</java.version>
