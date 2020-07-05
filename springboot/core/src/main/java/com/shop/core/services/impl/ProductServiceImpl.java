@@ -10,11 +10,11 @@ import com.shop.core.repositories.ProductRepository;
 import com.shop.core.services.ProductService;
 
 @Service
-public class ProductServiceImpl implements ProductService{
+public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
-    
+
     @Override
     public List<Product> getAll() {
 	return productRepository.findAll();
