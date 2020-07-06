@@ -6,19 +6,22 @@
 package com.admin.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
 
+
     @RequestMapping(value = "/login")
     public String viewLoginPage() {
-        return "login";
+	return "login";
     }
 
     @RequestMapping(value = "/")
-    public String viewDashBoardPage() {
-        return "index";
+    public String viewDashBoardPage(Model model) {
+	model.addAttribute("company", "SHOPPING MALL");
+	return "index";
     }
 
 }

@@ -24,12 +24,12 @@
 
             <!-- Sidebar Menu -->
             <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                <ul class="nav nav-pills nav-sidebar flex-column nav-flat nav-child-indent" data-widget="treeview" role="menu"
                     data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link active">
+                    <li class="nav-item has-treeview">
+                        <a th:href="@{/}" href="#" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
@@ -38,21 +38,50 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a th:href="@{/}" href="./index.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v1</p>
+                                    <p>Insight</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="./index2.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v2</p>
+                                    <p>Todo</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="./index3.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Dashboard v3</p>
+                                    <p>Report</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Product
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a th:href="@{/product-list}" href="/product-list" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>List</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a th:href="@{/product-category}" href="/product-category" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Category</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a th:href="@{/product-addnew}" href="/product-addnew" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Add New</p>
                                 </a>
                             </li>
                         </ul>
@@ -70,52 +99,28 @@
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
-                                Layout Options
+                                Khách Hàng
                                 <i class="fas fa-angle-left right"></i>
                                 <span class="badge badge-info right">6</span>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link">
+                                <a th:href="@{customer-list}" href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Top Navigation</p>
+                                    <p>Danh sách</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                <a th:href="@{customer-group}" href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Top Navigation + Sidebar</p>
+                                    <p>Nhóm Khách Hàng</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="pages/layout/boxed.html" class="nav-link">
+                                <a th:href="@{customer-report}" href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Boxed</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Fixed Sidebar</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Fixed Navbar</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-footer.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Fixed Footer</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Collapsed Sidebar</p>
+                                    <p>Report</p>
                                 </a>
                             </li>
                         </ul>

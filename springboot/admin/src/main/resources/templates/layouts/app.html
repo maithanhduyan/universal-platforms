@@ -10,41 +10,28 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" th:href="@{adminlte/plugins/fontawesome-free/css/all.min.css}"
         href="plugins/fontawesome-free/css/all.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Tempusdominus Bbootstrap 4 -->
-    <link rel="stylesheet" th:href="@{adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css}"
-        href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-    <!-- iCheck -->
-    <link rel="stylesheet" th:href="@{adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css}"
-        href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <!-- JQVMap -->
-    <link rel="stylesheet" th:href="@{adminlte/plugins/jqvmap/jqvmap.min.css}" href="plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" th:href="@{adminlte/dist/css/adminlte.min.css}" href="dist/css/adminlte.min.css">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" th:href="@{adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css}"
         href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-    <!-- Daterange picker -->
-    <link rel="stylesheet" th:href="@{adminlte/plugins/daterangepicker/daterangepicker.css}"
-        href="plugins/daterangepicker/daterangepicker.css">
-    <!-- summernote -->
-    <link rel="stylesheet" th:href="@{adminlte/plugins/summernote/summernote-bs4.css}"
-        href="plugins/summernote/summernote-bs4.css">
+
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" th:href="@{img/favicon.ico}" href="img/favicon.ico">
     <title th:replace="${title}"></title>
-    <!-- Font Awesome -->
+    <!-- Font Awesome 5-->
     <link th:href="@{/font-awesome/css/all.min.css}" rel="stylesheet" media="screen" />
     <!-- AOS -->
     <link th:href="@{/aos/aos.css}" rel="stylesheet" media="screen" />
-    <!-- Custom styles for this template -->
-    <link th:href="@{/css/style.css}" rel="stylesheet">
+
     <!-- STYLES -->
     <th:block th:replace="${styles} ?: ~{}"></th:block>
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -82,34 +69,13 @@
     <!-- Bootstrap 4 -->
     <script th:src="@{adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js}"
         src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- ChartJS -->
-    <script th:src="@{adminlte/plugins/chart.js/Chart.min.js}" src="plugins/chart.js/Chart.min.js"></script>
-    <!-- Sparkline -->
-    <script th:src="@{adminlte/plugins/sparklines/sparkline.js}" src="plugins/sparklines/sparkline.js"></script>
-    <!-- JQVMap -->
-    <script th:src="@{adminlte/plugins/jqvmap/jquery.vmap.min.js}" src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script th:src="@{adminlte/plugins/jqvmap/maps/jquery.vmap.usa.js}"
-        src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-    <!-- jQuery Knob Chart -->
-    <script th:src="@{adminlte/plugins/jquery-knob/jquery.knob.min.js}"
-        src="plugins/jquery-knob/jquery.knob.min.js"></script>
-    <!-- daterangepicker -->
-    <script th:src="@{adminlte/plugins/moment/moment.min.js}" src="plugins/moment/moment.min.js"></script>
-    <script th:src="@{adminlte/plugins/daterangepicker/daterangepicker.js}"
-        src="plugins/daterangepicker/daterangepicker.js"></script>
-    <!-- Tempusdominus Bootstrap 4 -->
-    <script th:src="@{adminlte/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js}"
-        src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-    <!-- Summernote -->
-    <script th:src="@{adminlte/plugins/summernote/summernote-bs4.min.js}"
-        src="plugins/summernote/summernote-bs4.min.js"></script>
+
     <!-- overlayScrollbars -->
     <script th:src="@{adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js}"
         src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
     <script th:src="@{adminlte/dist/js/adminlte.js}" src="dist/js/adminlte.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script th:src="@{adminlte/dist/js/pages/dashboard.js}" src="dist/js/pages/dashboard.js"></script>
+
     <!-- AdminLTE for demo purposes -->
     <script th:src="@{adminlte/dist/js/demo.js}" src="dist/js/demo.js"></script>
     <script th:src="@{/jquery.easing/jquery.easing.min.js}"></script>
