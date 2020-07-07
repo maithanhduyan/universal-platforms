@@ -6,23 +6,22 @@
 package com.admin.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class ProductController {
 
-    @RequestMapping(value = "/product-list", method = RequestMethod.GET)
+    @GetMapping(value = "/admin.product.list.html")
     public String viewProductListPage() {
 	return "products/list";
     }
     
-    @RequestMapping(value = "/product-category", method = RequestMethod.GET)
+    @GetMapping(value = "/admin.product.category.html")
     public String viewProductCategoryPage() {
 	return "products/category";
     }
     
-    @RequestMapping(value = "/product-addnew", method = RequestMethod.GET)
+    @GetMapping(value = "/admin.product.addnew.html")
     public String viewProductAddNewPage() {
 	return "products/addnew";
     }

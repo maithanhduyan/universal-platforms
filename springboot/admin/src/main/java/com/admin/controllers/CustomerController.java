@@ -6,22 +6,22 @@
 package com.admin.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class CustomerController {
 
-    @RequestMapping(value = "/customer-list")
+    @GetMapping(value = "/admin.customer.list.html")
     public String viewCustomerListPage() {
 	return "customers/list";
     }
 
-    @RequestMapping(value = "/customer-group")
+    @GetMapping(value = "/admin.customer.group.html")
     public String viewCustomerGroupPage() {
 	return "customers/group";
     }
 
-    @RequestMapping(value = "/customer-report")
+    @GetMapping(value = "/admin.customer.report.html")
     public String viewCustomerReportPage() {
 	return "customers/report";
     }
