@@ -18,6 +18,7 @@
 		<springframework.version>5.2.7.RELEASE</springframework.version>
 		<springframework.data.version>2.3.1.RELEASE</springframework.data.version>
 		<javax.persistence.version>2.2</javax.persistence.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>

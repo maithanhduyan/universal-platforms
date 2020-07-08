@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AdminLTE 3 | Dashboard</title>
+<title th:replace="${title}"></title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Font Awesome -->
@@ -19,7 +19,6 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" type="image/png" th:href="@{img/favicon.ico}" href="img/favicon.ico">
-<title th:replace="${title}"></title>
 <!-- Font Awesome 5-->
 <link th:href="@{/font-awesome/css/all.min.css}" rel="stylesheet" media="screen" />
 <!-- AOS -->
@@ -82,29 +81,26 @@
 	<script type="text/javascript">
         $.ajaxSetup({
             beforeSend : function (xhr) {
-                xhr.setRequestHeader('Authorization', '...');
-            }
-        });
-        $.ajaxSetup({
+                xhr.setRequestHeader('Authorization', 'Bearer...');
+            },
             headers : {
                 'X-CSRF-TOKEN' : 'CSRF-TOKEN ON HTML HEADER'
             }
         });
-
         $.ajax({
             url : "http://localhost:8080/api/healthCheck",
             contentType : "application/json",
             type : 'POST',
             success : function (data, status, xhr) {
                 if (status === '200') {
-                    console.log(data)
-
+                   
                 }
             },
             error : function (e) {
                 console.log(e)
             }
         });
+        
     </script>
 </body>
 

@@ -3,7 +3,7 @@
  * 
  * https://github.com/maithanhduyan/universal-platforms
  */
-package com.admin.configs;
+package com.shop.configs;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;

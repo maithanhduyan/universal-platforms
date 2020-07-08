@@ -3,14 +3,20 @@
  * 
  * https://github.com/maithanhduyan/universal-platforms
  */
-package com.admin.controllers;
+package com.shop.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.shop.core.services.ProductService;
+
 @Controller
 public class HomeController {
+
+    @Autowired
+    ProductService productService;
 
     @GetMapping(value = { "/admin.insight.html" })
     public String viewDashBoardPage(Model model) {
@@ -22,5 +28,4 @@ public class HomeController {
     public String viewHomePage() {
 	return "auth/login";
     }
-
 }

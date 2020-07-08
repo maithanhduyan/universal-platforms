@@ -3,7 +3,7 @@
  * 
  * https://github.com/maithanhduyan/universal-platforms
  */
-package com.admin.configs;
+package com.shop.configs;
 
 import javax.sql.DataSource;
 
@@ -24,7 +24,7 @@ import org.springframework.security.web.authentication.rememberme.InMemoryTokenR
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
-import com.admin.filters.JWTAuthenticationFilter;
+import com.shop.filters.JWTAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -119,3 +119,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 }
+

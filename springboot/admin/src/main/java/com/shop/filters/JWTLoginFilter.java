@@ -3,7 +3,7 @@
  * 
  * https://github.com/maithanhduyan/universal-platforms
  */
-package com.admin.filters;
+package com.shop.filters;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -22,7 +22,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import com.admin.services.TokenAuthenticationService;
+import com.shop.services.TokenAuthenticationService;
 
 public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
 

@@ -3,7 +3,7 @@
  * 
  * https://github.com/maithanhduyan/universal-platforms
  */
-package com.admin.filters;
+package com.shop.filters;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,8 +22,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.admin.services.TokenAuthenticationService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.shop.services.TokenAuthenticationService;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 

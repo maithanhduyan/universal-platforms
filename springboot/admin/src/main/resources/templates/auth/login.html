@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AdminLTE 3 | Log in</title>
+<title>Log in</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -86,24 +86,31 @@
 	<script th:src="@{adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js}" src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!-- AdminLTE App -->
 	<script th:src="@{adminlte/dist/js/adminlte.js}" src="../../dist/js/adminlte.min.js"></script>
-	<script type="text/javascript">
-        $.ajaxSetup({
-            beforeSend : function (xhr) {
-                xhr.setRequestHeader('Authorization', '...');
-            }
-        });
+	<script  th:inline="javascript" type="text/javascript">
+	   $.ajaxSetup({
+           beforeSend : function (xhr) {
+               xhr.setRequestHeader('Authorization', '...');
+           },
+           headers : {
+               'X-CSRF-TOKEN' : 'CSRF-TOKEN ON HTML HEADER'
+           }
+       });
+	   
 
         $.ajax({
-            url : "http://localhost:8080/api/healthCheck",
+            url :"http://localhost:8080/api/healthCheck",
             contentType : "application/json",
             type : 'POST',
-            success : function (result, xhr) {
-                console.log(result)
+            success : function (data, status, xhr) {
+                if (status === '200') {
+                }
             },
             error : function (e) {
                 console.log(e)
             }
         });
+
+
     </script>
 </body>
 </html>
