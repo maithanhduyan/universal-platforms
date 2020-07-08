@@ -24,6 +24,6 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     public List<Product> findAll();
     
     @Cacheable(cacheNames = "products")
-    @Query("SELECT p FROM Product p WHERE p.active =1 AND p.name LIKE %:keyword% OR p.code LIKE %:keyword% OR p.category.name LIKE %:keyword% OR p.productUnit.name LIKE %:keyword%")
+    @Query("SELECT p FROM Product p WHERE p.active =1 AND p.name LIKE %:keyword% OR p.code LIKE %:keyword% OR p.category.name LIKE %:keyword% ")
     public Page<Product> findAll(Pageable pageable, @Param("keyword") String keyword);
 }

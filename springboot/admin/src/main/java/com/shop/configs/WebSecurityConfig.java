@@ -33,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
-    private static final String[] publicURL = { "/login**", "/adminlte**", "/404.html", "/home" };
+    private static final String[] publicURL = { "/login**", "/adminlte**", "/404.html", "/home","/healthCheck" };
     private static final String[] secureURL = { "/product/**", "/customer/**" };
 
     @Override

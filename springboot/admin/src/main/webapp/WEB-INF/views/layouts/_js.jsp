@@ -33,7 +33,7 @@
         }
     });
     $.ajax({
-        url : "http://localhost:8080/api/healthCheck",
+        url : "/healthCheck",
         contentType : "application/json",
         type : 'POST',
         success : function (data, status, xhr) {
