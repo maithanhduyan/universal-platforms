@@ -10,21 +10,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value = "/customer/")
-public class CustomerController {
+@RequestMapping(value = "/dashboard")
+public class DashboardController {
 
     @GetMapping(value = "/index.html")
-    public String viewCustomerListPage() {
-	return "views/customers/index";
+    public String viewHomePage() {
+	return "views/dashboard/index";
     }
-
-    @GetMapping(value = "/group.html")
-    public String viewCustomerGroupPage() {
-	return "views/customers/group";
+    
+    @GetMapping(value = "/todo.html")
+    public String viewTodoPage() {
+	return "views/dashboard/todo";
     }
-
+    
     @GetMapping(value = "/report.html")
-    public String viewCustomerReportPage() {
-	return "views/customers/report";
+    public String viewReportPage() {
+	return "views/dashboard/report";
     }
 }

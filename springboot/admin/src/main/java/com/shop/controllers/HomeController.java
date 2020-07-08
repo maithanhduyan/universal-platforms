@@ -5,27 +5,22 @@
  */
 package com.shop.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
-import com.shop.core.services.ProductService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class HomeController {
 
-    @Autowired
-    ProductService productService;
-
-    @GetMapping(value = { "/admin.insight.html" })
-    public String viewDashBoardPage(Model model) {
-	model.addAttribute("company", "SHOPPING MALL");
-	return "index";
-    }
-
     @GetMapping(value = "/")
     public String viewHomePage() {
-	return "auth/login";
+	return "views/auth/login";
+    }
+    
+ // using jsp page
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String viewHomeJspPage() {
+        return "views/index";
     }
 }

@@ -1,5 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,28 +10,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Font Awesome -->
-<link rel="stylesheet" th:href="@{adminlte/plugins/fontawesome-free/css/all.min.css}" href="../../plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet"  href="/adminlte/plugins/fontawesome-free/css/all.min.css">
 <!-- Ionicons -->
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <!-- icheck bootstrap -->
-<link rel="stylesheet" th:href="@{adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css}" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<link rel="stylesheet"  href="/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 <!-- Theme style -->
-<link rel="stylesheet" th:href="@{adminlte/dist/css/adminlte.min.css}" href="../../dist/css/adminlte.min.css">
+<link rel="stylesheet"  href="adminlte/dist/css/adminlte.min.css">
 <!-- Google Font: Source Sans Pro -->
 
 </head>
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a href="../../index2.html"><b>Admin</b></a>
+			<a href="#"><b>Admin</b></a>
 		</div>
 		<!-- /.login-logo -->
 		<div class="card">
 			<div class="card-body login-card-body">
 				<p class="login-box-msg">Sign in to start your session</p>
-				<div th:if="${param.logout}">You have been logged out.</div>
-				<div th:if="${param.error}" class="login-box-msg text-danger">Invalid username and password.</div>
-				<form th:action="@{/login}" action="#" method="post">
+				<form  action="/login" method="post">
 					<div class="input-group mb-3">
 						<input type="email" name="username" class="form-control" placeholder="Email">
 						<div class="input-group-append">
@@ -81,12 +81,12 @@
 	<!-- /.login-box -->
 
 	<!-- jQuery -->
-	<script th:src="@{adminlte/plugins/jquery/jquery.min.js}" src="../../plugins/jquery/jquery.min.js"></script>
+	<script src="/adminlte/plugins/jquery/jquery.min.js"></script>
 	<!-- Bootstrap 4 -->
-	<script th:src="@{adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js}" src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!-- AdminLTE App -->
-	<script th:src="@{adminlte/dist/js/adminlte.js}" src="../../dist/js/adminlte.min.js"></script>
-	<script  th:inline="javascript" type="text/javascript">
+	<script  src="/adminlte/dist/js/adminlte.min.js"></script>
+	<script type="text/javascript">
 	   $.ajaxSetup({
            beforeSend : function (xhr) {
                xhr.setRequestHeader('Authorization', '...');
@@ -96,7 +96,6 @@
            }
        });
 	   
-
         $.ajax({
             url :"http://localhost:8080/api/healthCheck",
             contentType : "application/json",

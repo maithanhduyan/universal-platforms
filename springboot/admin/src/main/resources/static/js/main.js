@@ -10,10 +10,11 @@
     // because the 'href' property of the DOM element is the absolute path
     var path = window.location.href;
     $(".nav-sidebar li.nav-item a.nav-link").each(function () {
-        if (this.href === path) {
+        if (this.href===path) {
             $(this).parent().parent().parent().addClass("menu-open");
             $(this).parent().parent().parent().find('.nav-link').first().addClass("active");
             $(this).addClass("active");
+            return false;
         }
     });
 

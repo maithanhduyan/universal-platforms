@@ -33,16 +33,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource dataSource;
 
+    private static final String[] publicURL = { "/login**", "/adminlte**", "/404.html", "/home" };
+    private static final String[] secureURL = { "/product/**", "/customer/**" };
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
 	http.csrf().disable();
 
-	// Page not secure
-	http.authorizeRequests().antMatchers("/login**","/adminlte**", "/404.html").permitAll();
+	// Public page
+	http.authorizeRequests().antMatchers(publicURL).permitAll();
 
-	// Admin secure
-	http.authorizeRequests().antMatchers("/admin**").access("hasRole('ROLE_ADMIN')");
+	// Secure page
+	http.authorizeRequests().antMatchers(secureURL).access("hasRole('ROLE_ADMIN')");
 
 	// Rest Api secure
 	http.authorizeRequests()//
@@ -50,8 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.access("hasRole('ROLE_ADMIN')")//
 		.and()//
 		.addFilterAfter(new JWTAuthenticationFilter(authenticationManager()),
-			UsernamePasswordAuthenticationFilter.class)//
-		;
+			UsernamePasswordAuthenticationFilter.class);
 
 	// Login Form
 	http.authorizeRequests() //
@@ -59,7 +61,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.formLogin()//
 		.loginProcessingUrl("/login")// POST Method
 		.loginPage("/login").permitAll()//
-		.defaultSuccessUrl("/admin.insight.html")//
+		.defaultSuccessUrl("/dashboard/index.html")//
 		.failureUrl("/login?error=true")//
 		.usernameParameter("username")//
 		.passwordParameter("password")//
@@ -71,9 +73,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.logoutUrl("/logout") //
 		.logoutSuccessUrl("/login") //
 		.deleteCookies("JSESSIONID");
-	
-	//
-//	http.authorizeRequests().anyRequest().authenticated();
 
 	// Remember Me
 	http.authorizeRequests().and() //
@@ -119,4 +118,3 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 }
-

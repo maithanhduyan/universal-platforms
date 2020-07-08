@@ -10,39 +10,42 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class ErrorPageController implements ErrorController {
 
     @GetMapping("/error")
-    public String handleError(HttpServletRequest request) {
+    public String handleError(HttpServletRequest request, Model model) {
 	Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
 	String _errorPage = "";
 	if (status != null) {
 	    Integer statusCode = Integer.valueOf(status.toString());
 	    switch (statusCode) {
 	    case 401:
-		_errorPage = "redirect:/401.html";
+		_errorPage = "views/errors/401";
 		break;
 	    case 403:
-		_errorPage = "redirect:/403.html";
+		_errorPage = "views/errors/403";
 		break;
 	    case 404:
-		_errorPage = "redirect:/404.html";
+		_errorPage = "views/errors/404";
 		break;
 	    case 405:
-		_errorPage = "redirect:/405.html";
+		_errorPage = "views/errors/405";
 		break;
 	    case 500:
-		_errorPage = "redirect:/500.html";
+		_errorPage = "views/errors/500";
 		break;
 	    default:
-		_errorPage = "errors/error";
+		_errorPage = "views/errors/error";
 		break;
 	    }
 	}
-	return _errorPage;
+	model.addAttribute("message", status);
+//	return _errorPage;
+	return "views/errors/error";
     }
 
     @Override
@@ -53,22 +56,22 @@ public class ErrorPageController implements ErrorController {
 
     @GetMapping(value = "/401.html")
     public String throw401Page() {
-	return "errors/401";
+	return "views/errors/401";
     }
 
     @GetMapping(value = "/403.html")
     public String throw403Page() {
-	return "errors/403";
+	return "views/errors/403";
     }
 
     @GetMapping(value = "/404.html")
     public String throw404Page() {
-	return "errors/404";
+	return "views/errors/404";
     }
 
     @GetMapping(value = "/500.html")
     public String throw500Page() {
-	return "errors/500";
+	return "views/errors/500";
     }
 
 }

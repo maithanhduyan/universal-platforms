@@ -7,22 +7,24 @@ package com.shop.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping(value = "/product")
 public class ProductController {
 
-    @GetMapping(value = "/admin.product.list.html")
-    public String viewProductListPage() {
-	return "products/list";
+    @GetMapping(value = "/index.html")
+    public String viewListPage() {
+	return "views/products/index";
     }
     
-    @GetMapping(value = "/admin.product.category.html")
-    public String viewProductCategoryPage() {
-	return "products/category";
+    @GetMapping(value = "/category.html")
+    public String viewCategoryPage() {
+	return "views/products/category";
     }
     
-    @GetMapping(value = "/admin.product.addnew.html")
-    public String viewProductAddNewPage() {
-	return "products/addnew";
+    @GetMapping(value = "/add.html")
+    public String viewAddNewPage() {
+	return "views/products/add";
     }
 }
