@@ -40,6 +40,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
 	http.csrf().disable();
+	
+	// Headers
+	http.headers().cacheControl().disable().frameOptions();
 
 	// Public page
 	http.authorizeRequests().antMatchers(publicURL).permitAll();

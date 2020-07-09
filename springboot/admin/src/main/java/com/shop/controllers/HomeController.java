@@ -18,6 +18,11 @@ public class HomeController {
 	return "views/auth/login";
     }
     
+    @GetMapping(value = "/lockscreen.html")
+    public String viewLockScreenPage() {
+	return "views/screens/lockscreen";
+    }
+    
  // using jsp page
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String viewHomeJspPage() {

@@ -48,28 +48,27 @@
 							</a></li>
 					</ul>
 				</li>
-				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i
-							class="nav-icon fas fa-tachometer-alt"></i>
+				<li class="nav-item has-treeview"><a href="#" class="nav-link"><i class="nav-icon fas fa-cubes"></i>
 						<p>
-							Product <i class="right fas fa-angle-left"></i>
+							Mặt Hàng <i class="right fas fa-angle-left"></i>
 						</p>
 					</a>
 					<ul class="nav nav-treeview">
 						<li class="nav-item"><a href="/product/index.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
-								<p>List</p>
+								<p>Danh Mục Mặt Hàng</p>
 							</a></li>
 						<li class="nav-item"><a href="/product/category.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
-								<p>Category</p>
+								<p>Nhóm Hàng</p>
 							</a></li>
 						<li class="nav-item"><a href="/product/add.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
-								<p>Add New</p>
+								<p>Thêm Mới</p>
 							</a></li>
 					</ul>
 				</li>
-				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i class="nav-icon fas fa-copy"></i>
+				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i class="nav-icon fas fa-users"></i>
 						<p>
 							Khách Hàng <i class="fas fa-angle-left right"></i> <span
 								class="badge badge-info right">6</span>
@@ -82,6 +81,9 @@
 							</a></li>
 						<li class="nav-item"><a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i>
 								<p>Nhóm Khách Hàng</p>
+							</a></li>
+						<li class="nav-item"><a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+								<p>Khách Hàng Thân Thiết</p>
 							</a></li>
 						<li class="nav-item"><a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i>
 								<p>Report</p>
@@ -98,56 +100,51 @@
 						<li class="nav-item"><a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i>
 								<p>Hóa Đơn Bán Hàng</p>
 							</a></li>
-						<li class="nav-item"><a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i>
-								<p></p>
-							</a></li>
 						<li class="nav-item"><a href="pages/charts/inline.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
 								<p>Quản Lý Bán Hàng</p>
 							</a></li>
+						<li class="nav-item"><a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+								<p>Thống Kê Doanh Thu</p>
+							</a></li>
+						<li class="nav-item"><a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i>
+								<p>Thống Kê Mặt Hàng Bán</p>
+							</a></li>
 					</ul>
 				</li>
-				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i class="nav-icon fas fa-tree"></i>
+				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i class="nav-icon fas fa-chalkboard-teacher"></i>
 						<p>
 							Nhân Sự <i class="fas fa-angle-left right"></i>
 						</p>
 					</a>
 					<ul class="nav nav-treeview">
-						<li class="nav-item"><a href="pages/UI/general.html" class="nav-link"> <i
+						<li class="nav-item"><a href="/nhanvien/danhmuc.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
-								<p>General</p>
+								<p>Danh Mục Nhân Viên</p>
 							</a></li>
-						<li class="nav-item"><a href="pages/UI/icons.html" class="nav-link"> <i
+						<li class="nav-item"><a href="/nhanvien/calamviec.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
-								<p>Icons</p>
+								<p>Danh Mục Ca Làm Việc</p>
 							</a></li>
-						<li class="nav-item"><a href="pages/UI/buttons.html" class="nav-link"> <i
+						<li class="nav-item"><a href="/nhanvien/tamungluong.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
-								<p>Buttons</p>
+								<p>Tạm Ứng Lương</p>
 							</a></li>
-						<li class="nav-item"><a href="pages/UI/sliders.html" class="nav-link"> <i
+						<li class="nav-item"><a href="/nhanvien/thuongphat.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
-								<p>Sliders</p>
+								<p>Thưởng Phạt</p>
 							</a></li>
-						<li class="nav-item"><a href="pages/UI/modals.html" class="nav-link"> <i
+						<li class="nav-item"><a href="/nhanvien/chamcong.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
-								<p>Modals & Alerts</p>
+								<p>Chấm Công</p>
 							</a></li>
-						<li class="nav-item"><a href="pages/UI/navbar.html" class="nav-link"> <i
+						<li class="nav-item"><a href="/nhanvien/tinhluong.html" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
-								<p>Navbar & Tabs</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/UI/timeline.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Timeline</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/UI/ribbons.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Ribbons</p>
+								<p>Tính Lương</p>
 							</a></li>
 					</ul>
 				</li>
-				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i class="nav-icon fas fa-edit"></i>
+				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i class="nav-icon fas fa-store-alt"></i>
 						<p>
 							Kho Hàng <i class="fas fa-angle-left right"></i>
 						</p>
@@ -200,7 +197,9 @@
 					</a></li>
 				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i class="nav-icon far fa-envelope"></i>
 						<p>
-							Mailbox <i class="fas fa-angle-left right"></i>
+							Mailbox  <i class="fas fa-angle-left right"></i>
+							<span
+								class="badge badge-info right">6</span>
 						</p>
 					</a>
 					<ul class="nav nav-treeview">
@@ -218,118 +217,16 @@
 							</a></li>
 					</ul>
 				</li>
-				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i class="nav-icon fas fa-book"></i>
-						<p>
-							Pages <i class="fas fa-angle-left right"></i>
-						</p>
-					</a>
-					<ul class="nav nav-treeview">
-						<li class="nav-item"><a href="pages/examples/invoice.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Invoice</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/profile.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Profile</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/e-commerce.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>E-commerce</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/projects.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Projects</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/project-add.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Project Add</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/project-edit.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Project Edit</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/project-detail.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Project Detail</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/contacts.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Contacts</p>
-							</a></li>
-					</ul>
-				</li>
-				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i
-							class="nav-icon far fa-plus-square"></i>
-						<p>
-							Extras <i class="fas fa-angle-left right"></i>
-						</p>
-					</a>
-					<ul class="nav nav-treeview">
-						<li class="nav-item"><a href="pages/examples/login.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Login</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/register.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Register</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/forgot-password.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Forgot Password</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/recover-password.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Recover Password</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/lockscreen.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Lockscreen</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/legacy-user-menu.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Legacy User Menu</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/language-menu.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Language Menu</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/404.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Error 404</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/500.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Error 500</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/pace.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Pace</p>
-							</a></li>
-						<li class="nav-item"><a href="pages/examples/blank.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Blank Page</p>
-							</a></li>
-						<li class="nav-item"><a href="starter.html" class="nav-link"> <i
-									class="far fa-circle nav-icon"></i>
-								<p>Starter Page</p>
-							</a></li>
-					</ul>
-				</li>
+				
 				<li class="nav-header">TRỢ GIÚP</li>
 				<li class="nav-item"><a href="https://adminlte.io/docs/3.0" class="nav-link"> <i
 							class="nav-icon fas fa-file"></i>
 						<p>Documentation</p>
 					</a></li>
 				<li class="nav-header">HỆ THỐNG</li>
-				<li class="nav-item"><a href="#" class="nav-link"> <i class="fas fa-circle nav-icon"></i>
-						<p>Người Dùng Và Phân Quyền</p>
-					</a></li>
-				<li class="nav-item"><a href="#" class="nav-link"> <i class="fas fa-circle nav-icon"></i>
-						<p>Lập Chỉ Tiêu</p>
-					</a></li>
 				<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i class="nav-icon fas fa-circle"></i>
 						<p>
-							Dữ Liệu <i class="right fas fa-angle-left"></i>
+							Cấu Hình <i class="right fas fa-angle-left"></i>
 						</p>
 					</a>
 					<ul class="nav nav-treeview">
@@ -338,42 +235,57 @@
 								<p>Chỉ Tiêu Doanh Thu</p>
 							</a>
 						</li>
+						
 						<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i
 									class="far fa-circle nav-icon"></i>
 								<p>
-									Level 2 <i class="right fas fa-angle-left"></i>
+									Phân Quyền<i class="right fas fa-angle-left"></i>
 								</p>
 							</a>
 							<ul class="nav nav-treeview">
 								<li class="nav-item"><a href="#" class="nav-link"> <i
 											class="far fa-dot-circle nav-icon"></i>
-										<p>Level 3</p>
+										<p>Nhóm</p>
 									</a></li>
 								<li class="nav-item"><a href="#" class="nav-link"> <i
 											class="far fa-dot-circle nav-icon"></i>
-										<p>Level 3</p>
+										<p>Thêm Quyền</p>
 									</a></li>
 								<li class="nav-item"><a href="#" class="nav-link"> <i
 											class="far fa-dot-circle nav-icon"></i>
-										<p>Level 3</p>
+										<p>Lưu Vết</p>
 									</a></li>
 							</ul>
 						</li>
-						<li class="nav-item"><a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i>
-								<p>Cấu Hình</p>
-							</a></li>
+						<li class="nav-item has-treeview"><a href="#" class="nav-link"> <i
+									class="far fa-circle nav-icon"></i>
+								<p>
+									Dữ Liệu<i class="right fas fa-angle-left"></i>
+								</p>
+							</a>
+							<ul class="nav nav-treeview">
+								<li class="nav-item"><a href="#" class="nav-link"> <i
+											class="far fa-dot-circle nav-icon"></i>
+										<p>Sao Lưu</p>
+									</a></li>
+								<li class="nav-item"><a href="#" class="nav-link"> <i
+											class="far fa-dot-circle nav-icon"></i>
+										<p>Xuất File</p>
+									</a></li>
+								<li class="nav-item"><a href="#" class="nav-link"> <i
+											class="far fa-dot-circle nav-icon"></i>
+										<p>Máy Chủ</p>
+									</a></li>
+							</ul>
+						</li>
 					</ul>
-				</li>
-				<li class="nav-item"><a href="#" class="nav-link"> <i class="fas fa-circle nav-icon"></i>
-						<p>Cấu Hình</p>
-					</a>
 				</li>
 				<li class="nav-header"></li>
 				<li class="nav-item"><a href="#" class="nav-link"> <i class="nav-icon far fa-circle text-danger"></i>
 						<p class="text">Important</p>
 					</a>
 				</li>
-				<li class="nav-item"><a href="#" class="nav-link"> <i class="nav-icon far fa-circle text-warning"></i>
+				<li class="nav-item"><a href="/lockscreen.html" class="nav-link"> <i class="nav-icon far fa-circle text-warning"></i>
 						<p>Khóa Màn Hình</p>
 					</a></li>
 				<li class="nav-item"><a href="#" class="nav-link"
