@@ -31,7 +31,7 @@ public class HttpHandshakeInterceptor implements HandshakeInterceptor {
 	    ServletServerHttpRequest servletRequest = (ServletServerHttpRequest) request;
 	    HttpSession session = servletRequest.getServletRequest().getSession();
 	    attributes.put("sessionId", session.getId());
-	    log.debug("Call beforeHandshake");
+	    log.debug("Call beforeHandshake" + session.getId());
 	}
 	return true;
     }

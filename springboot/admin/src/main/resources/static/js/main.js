@@ -101,4 +101,3 @@ function onMessageReceived(payload) {
 }
 
 // messageForm.addEventListener('submit', sendMessage, true);
-// html.addEventListener('onClick',sendMessage,true)

@@ -19,32 +19,32 @@ public class ErrorPageController implements ErrorController {
     @GetMapping("/error")
     public String handleError(HttpServletRequest request, Model model) {
 	Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
-	String _errorPage = "";
+	String _errorMessage = "";
 	if (status != null) {
 	    Integer statusCode = Integer.valueOf(status.toString());
 	    switch (statusCode) {
 	    case 401:
-		_errorPage = "views/errors/401";
+		_errorMessage = "401 Unauthorized";
 		break;
 	    case 403:
-		_errorPage = "views/errors/403";
+		_errorMessage = "403 Forbidden";
 		break;
 	    case 404:
-		_errorPage = "views/errors/404";
+		_errorMessage = "404 Not Found";
 		break;
 	    case 405:
-		_errorPage = "views/errors/405";
+		_errorMessage = "405 Method Not Allowed";
 		break;
 	    case 500:
-		_errorPage = "views/errors/500";
+		_errorMessage = "500 Internal Server Error";
 		break;
 	    default:
-		_errorPage = "views/errors/error";
+		_errorMessage = "views/errors/error";
 		break;
 	    }
 	}
-	model.addAttribute("message", status);
-//	return _errorPage;
+	model.addAttribute("status", status);
+	model.addAttribute("message", _errorMessage);
 	return "views/errors/error";
     }
 

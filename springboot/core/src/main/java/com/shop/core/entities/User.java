@@ -7,9 +7,13 @@ package com.shop.core.entities;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -34,9 +38,10 @@ public class User {
     @Column(name = "email_verified_at")
     @Temporal(TemporalType.TIMESTAMP)
     private Date emailVerifiedAt;
-
-    @Column(name = "role_id")
-    private String role;
+    
+    @ManyToOne(cascade = { CascadeType.ALL }, fetch = FetchType.EAGER)
+    @JoinColumn(name = "role_id", nullable = true)
+    private Role role;
 
     @Column(name = "active")
     private int active;
@@ -62,154 +67,154 @@ public class User {
      * @return the id
      */
     public String getId() {
-	return id;
+        return id;
     }
 
     /**
      * @param id the id to set
      */
     public void setId(String id) {
-	this.id = id;
+        this.id = id;
     }
 
     /**
      * @return the username
      */
     public String getUsername() {
-	return username;
+        return username;
     }
 
     /**
      * @param username the username to set
      */
     public void setUsername(String username) {
-	this.username = username;
+        this.username = username;
     }
 
     /**
      * @return the password
      */
     public String getPassword() {
-	return password;
+        return password;
     }
 
     /**
      * @param password the password to set
      */
     public void setPassword(String password) {
-	this.password = password;
+        this.password = password;
     }
 
     /**
      * @return the email
      */
     public String getEmail() {
-	return email;
+        return email;
     }
 
     /**
      * @param email the email to set
      */
     public void setEmail(String email) {
-	this.email = email;
+        this.email = email;
     }
 
     /**
      * @return the emailVerifiedAt
      */
     public Date getEmailVerifiedAt() {
-	return emailVerifiedAt;
+        return emailVerifiedAt;
     }
 
     /**
      * @param emailVerifiedAt the emailVerifiedAt to set
      */
     public void setEmailVerifiedAt(Date emailVerifiedAt) {
-	this.emailVerifiedAt = emailVerifiedAt;
+        this.emailVerifiedAt = emailVerifiedAt;
     }
 
     /**
      * @return the role
      */
-    public String getRole() {
-	return role;
+    public Role getRole() {
+        return role;
     }
 
     /**
      * @param role the role to set
      */
-    public void setRole(String role) {
-	this.role = role;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     /**
      * @return the active
      */
     public int getActive() {
-	return active;
+        return active;
     }
 
     /**
      * @param active the active to set
      */
     public void setActive(int active) {
-	this.active = active;
+        this.active = active;
     }
 
     /**
      * @return the createdBy
      */
     public String getCreatedBy() {
-	return createdBy;
+        return createdBy;
     }
 
     /**
      * @param createdBy the createdBy to set
      */
     public void setCreatedBy(String createdBy) {
-	this.createdBy = createdBy;
+        this.createdBy = createdBy;
     }
 
     /**
      * @return the updatedBy
      */
     public String getUpdatedBy() {
-	return updatedBy;
+        return updatedBy;
     }
 
     /**
      * @param updatedBy the updatedBy to set
      */
     public void setUpdatedBy(String updatedBy) {
-	this.updatedBy = updatedBy;
+        this.updatedBy = updatedBy;
     }
 
     /**
      * @return the createdDate
      */
     public Date getCreatedDate() {
-	return createdDate;
+        return createdDate;
     }
 
     /**
      * @param createdDate the createdDate to set
      */
     public void setCreatedDate(Date createdDate) {
-	this.createdDate = createdDate;
+        this.createdDate = createdDate;
     }
 
     /**
      * @return the updatedDate
      */
     public Date getUpdatedDate() {
-	return updatedDate;
+        return updatedDate;
     }
 
     /**
      * @param updatedDate the updatedDate to set
      */
     public void setUpdatedDate(Date updatedDate) {
-	this.updatedDate = updatedDate;
+        this.updatedDate = updatedDate;
     }
 
     @Override
@@ -219,5 +224,7 @@ public class User {
 		+ createdBy + ", updatedBy=" + updatedBy + ", createdDate=" + createdDate + ", updatedDate="
 		+ updatedDate + "]";
     }
+
+   
 
 }

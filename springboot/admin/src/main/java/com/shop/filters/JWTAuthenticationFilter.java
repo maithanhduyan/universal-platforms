@@ -27,7 +27,7 @@ import com.shop.services.TokenAuthenticationService;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
-    private Logger log = LoggerFactory.getLogger(this.getClass().getName());
+    private Logger log = LoggerFactory.getLogger(getClass());
 
     private AuthenticationManager authenticationManager;
 
@@ -39,6 +39,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
 	    throws AuthenticationException {
 	try {
+	    
 	    User creds = new ObjectMapper().readValue(request.getInputStream(), User.class);
 
 	    return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(creds.getUsername(),

@@ -7,3 +7,6 @@
 #### WebSocket
 - [O7planing- Websocket chating]('https://o7planning.org/vi/10719/tao-ung-dung-chat-don-gian-voi-spring-boot-va-websocket')
 - [TutorialPoint - Websocket]('https://www.tutorialspoint.com/spring_boot/spring_boot_web_socket.htm')
+
+#### Error Code
+- [developer.mozilla.org]('https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401')

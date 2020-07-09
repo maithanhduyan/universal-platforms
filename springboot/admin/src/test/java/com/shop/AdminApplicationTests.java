@@ -1,4 +1,9 @@
-package com.admin;
+/**
+ * @author Mai Thành Duy An [tiachop0102@gmail.com]
+ * 
+ * https://github.com/maithanhduyan/universal-platforms
+ */
+package com.shop;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
