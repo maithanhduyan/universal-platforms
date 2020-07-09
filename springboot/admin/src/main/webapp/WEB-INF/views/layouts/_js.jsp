@@ -11,14 +11,18 @@
 </script>
 <!-- Bootstrap 4 -->
 <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<!-- Web Socket  -->
+<!-- reference: https://cdnjs.com/libraries/sockjs-client -->
+<script src="/sockjs-client/sockjs.min.js"></script>
+<!-- reference: https://cdnjs.com/libraries/stomp.js/ -->
+<script src="/stomp-websocket/stomp.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="/adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="/adminlte/dist/js/adminlte.js" ></script>
+<script src="/adminlte/dist/js/adminlte.js"></script>
 
 <!-- AdminLTE for demo purposes -->
-<script src="/adminlte/dist/js/demo.js" ></script>
+<script src="/adminlte/dist/js/demo.js"></script>
 <script src="/jquery.easing/jquery.easing.min.js"></script>
 <script src="/aos/aos.js"></script>
 <script src="/js/main.js"></script>
