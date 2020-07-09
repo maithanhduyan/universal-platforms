@@ -19,11 +19,11 @@ import com.shop.core.entities.Product;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, String> {
-    
+
     @Query("SELECT p FROM Product p WHERE p.active =1")
     public List<Product> findAll();
-    
-    @Cacheable(cacheNames = "products")
+
     @Query("SELECT p FROM Product p WHERE p.active =1 AND p.name LIKE %:keyword% OR p.code LIKE %:keyword% OR p.category.name LIKE %:keyword% ")
+    @Cacheable(cacheNames = "products")
     public Page<Product> findAll(Pageable pageable, @Param("keyword") String keyword);
 }
