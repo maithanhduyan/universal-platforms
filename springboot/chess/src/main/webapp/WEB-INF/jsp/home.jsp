@@ -38,18 +38,18 @@
 						</tr>
 						<tr>
 							<td style="width: 50pt">6</td>
-							<td id="a6" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 1pt"><br></td>
+							<td id="a6" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 1pt"></td>
 							<td id="b6" class="black-cell"></td>
 							<td id="c6" class="white-cell"></td>
 							<td id="d6" class="black-cell"></td>
 							<td id="e6" class="white-cell"></td>
 							<td id="f6" class="black-cell"></td>
 							<td id="g6" class="white-cell"></td>
-							<td id="h6" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 1pt 0pt 0pt" bgcolor="silver"></td>
+							<td id="h6" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 1pt 0pt 0pt" ></td>
 						</tr>
 						<tr>
 							<td style="width: 50pt">5</td>
-							<td id="a5" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 1pt" bgcolor="silver"><br></td>
+							<td id="a5" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 1pt" ></td>
 							<td id="b5" class="white-cell" ></td>
 							<td id="c5" class="black-cell" ></td>
 							<td id="d5" class="white-cell" ></td>
@@ -60,18 +60,18 @@
 						</tr>
 						<tr>
 							<td style="width: 50pt">4</td>
-							<td id="a4" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 1pt"><br></td>
+							<td id="a4" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 1pt"></td>
 							<td id="b4" class="black-cell" ></td>
 							<td id="c4" class="white-cell" ></td>
 							<td id="d4" class="black-cell" ></td>
 							<td id="e4" class="white-cell" ></td>
 							<td id="f4" class="black-cell" ></td>
 							<td id="g4" class="white-cell" ></td>
-							<td id="h4" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 1pt 0pt 0pt" bgcolor="silver"></td>
+							<td id="h4" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 1pt 0pt 0pt" ></td>
 						</tr>
 						<tr>
 							<td style="width: 50pt">3</td>
-							<td id="a3" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 1pt" bgcolor="silver"><br></td>
+							<td id="a3" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 0pt 0pt 1pt" ></td>
 							<td id="b3" class="white-cell" ></td>
 							<td id="c3" class="black-cell" ></td>
 							<td id="d3" class="white-cell" ></td>
@@ -89,7 +89,7 @@
 							<td id="e2" class="white-cell" >♙</td>
 							<td id="f2" class="black-cell" >♙</td>
 							<td id="g2" class="white-cell" >♙</td>
-							<td id="h2" class="black-cell" style=" border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 1pt 0pt 0pt" bgcolor="silver">♙</td>
+							<td id="h2" class="black-cell" style=" border-collapse: collapse; border-color: black; border-style: solid; border-width: 0pt 1pt 0pt 0pt">♙</td>
 						</tr>
 						<tr>
 							<td style="width: 50pt">1</td>
