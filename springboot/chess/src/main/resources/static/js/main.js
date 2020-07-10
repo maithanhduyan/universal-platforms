@@ -16,6 +16,7 @@ document.getElementById("resetBoardButton").addEventListener('click',function(){
 
 function initialBoard() {
     resetBoard();
+    initEvent();
 }
 
 function selectCell(event){
@@ -26,8 +27,359 @@ function selectCell(event){
     cell.style.backgroundColor = "rgb(236,119,22)"; 
 }
 
-function initialBoard(){
-    resetBoard();
+// Drag event
+function initEvent(){
+    document.getElementById("a8").draggable="true";
+    document.getElementById("a8").addEventListener("dragstart", dragStart, true);
+    document.getElementById("a8").addEventListener("drop", drop, true);
+    document.getElementById("a8").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("b8").draggable="true";
+    document.getElementById("b8").addEventListener("dragstart", dragStart, true);
+    document.getElementById("b8").addEventListener("drop", drop, true);
+    document.getElementById("b8").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("c8").draggable="true";
+    document.getElementById("c8").addEventListener("dragstart", dragStart, true);
+    document.getElementById("c8").addEventListener("drop", drop, true);
+    document.getElementById("c8").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("d8").draggable="true";
+    document.getElementById("d8").addEventListener("dragstart", dragStart, true);
+    document.getElementById("d8").addEventListener("drop", drop, true);
+    document.getElementById("d8").addEventListener("dragover", allowDrop, true);
+   
+    document.getElementById("e8").draggable="true";
+    document.getElementById("e8").addEventListener("dragstart", dragStart, true);
+    document.getElementById("e8").addEventListener("drop", drop, true);
+    document.getElementById("e8").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("f8").draggable="true";
+    document.getElementById("f8").addEventListener("dragstart", dragStart, true);
+    document.getElementById("f8").addEventListener("drop", drop, true);
+    document.getElementById("f8").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("g8").draggable="true";
+    document.getElementById("g8").addEventListener("dragstart", dragStart, true);
+    document.getElementById("g8").addEventListener("drop", drop, true);
+    document.getElementById("g8").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("h8").draggable="true";
+    document.getElementById("h8").addEventListener("dragstart", dragStart, true);
+    document.getElementById("h8").addEventListener("drop", drop, true);
+    document.getElementById("h8").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("a7").draggable="true";
+    document.getElementById("a7").addEventListener("dragstart", dragStart, true);
+    document.getElementById("a7").addEventListener("drop", drop, true);
+    document.getElementById("a7").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("b7").draggable="true";
+    document.getElementById("b7").addEventListener("dragstart", dragStart, true);
+    document.getElementById("b7").addEventListener("drop", drop, true);
+    document.getElementById("b7").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("c7").draggable="true";
+    document.getElementById("c7").addEventListener("dragstart", dragStart, true);
+    document.getElementById("c7").addEventListener("drop", drop, true);
+    document.getElementById("c7").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("d7").draggable="true";
+    document.getElementById("d7").addEventListener("dragstart", dragStart, true);
+    document.getElementById("d7").addEventListener("drop", drop, true);
+    document.getElementById("d7").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("e7").draggable="true";
+    document.getElementById("e7").addEventListener("dragstart", dragStart, true);
+    document.getElementById("e7").addEventListener("drop", drop, true);
+    document.getElementById("e7").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("f7").draggable="true";
+    document.getElementById("f7").addEventListener("dragstart", dragStart, true);
+    document.getElementById("f7").addEventListener("drop", drop, true);
+    document.getElementById("f7").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("g7").draggable="true";
+    document.getElementById("g7").addEventListener("dragstart", dragStart, true);
+    document.getElementById("g7").addEventListener("drop", drop, true);
+    document.getElementById("g7").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("h7").draggable="true";
+    document.getElementById("h7").addEventListener("dragstart", dragStart, true);
+    document.getElementById("h7").addEventListener("drop", drop, true);
+    document.getElementById("h7").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("a6").draggable="true";
+    document.getElementById("a6").addEventListener("dragstart", dragStart, true);
+    document.getElementById("a6").addEventListener("drop", drop, true);
+    document.getElementById("a6").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("b6").draggable="true";
+    document.getElementById("b6").addEventListener("dragstart", dragStart, true);
+    document.getElementById("b6").addEventListener("drop", drop, true);
+    document.getElementById("b6").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("c6").draggable="true";
+    document.getElementById("c6").addEventListener("dragstart", dragStart, true);
+    document.getElementById("c6").addEventListener("drop", drop, true);
+    document.getElementById("c6").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("d6").draggable="true";
+    document.getElementById("d6").addEventListener("dragstart", dragStart, true);
+    document.getElementById("d6").addEventListener("drop", drop, true);
+    document.getElementById("d6").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("e6").draggable="true";
+    document.getElementById("e6").addEventListener("dragstart", dragStart, true);
+    document.getElementById("e6").addEventListener("drop", drop, true);
+    document.getElementById("e6").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("f6").draggable="true";
+    document.getElementById("f6").addEventListener("dragstart", dragStart, true);
+    document.getElementById("f6").addEventListener("drop", drop, true);
+    document.getElementById("f6").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("g6").draggable="true";
+    document.getElementById("g6").addEventListener("dragstart", dragStart, true);
+    document.getElementById("g6").addEventListener("drop", drop, true);
+    document.getElementById("g6").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("h6").draggable="true";
+    document.getElementById("h6").addEventListener("dragstart", dragStart, true);
+    document.getElementById("h6").addEventListener("drop", drop, true);
+    document.getElementById("h6").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("a5").draggable="true";
+    document.getElementById("a5").addEventListener("dragstart", dragStart, true);
+    document.getElementById("a5").addEventListener("drop", drop, true);
+    document.getElementById("a5").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("b5").draggable="true";
+    document.getElementById("b5").addEventListener("dragstart", dragStart, true);
+    document.getElementById("b5").addEventListener("drop", drop, true);
+    document.getElementById("b5").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("c5").draggable="true";
+    document.getElementById("c5").addEventListener("dragstart", dragStart, true);
+    document.getElementById("c5").addEventListener("drop", drop, true);
+    document.getElementById("c5").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("d5").draggable="true";
+    document.getElementById("d5").addEventListener("dragstart", dragStart, true);
+    document.getElementById("d5").addEventListener("drop", drop, true);
+    document.getElementById("d5").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("e5").draggable="true";
+    document.getElementById("e5").addEventListener("dragstart", dragStart, true);
+    document.getElementById("e5").addEventListener("drop", drop, true);
+    document.getElementById("e5").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("f5").draggable="true";
+    document.getElementById("f5").addEventListener("dragstart", dragStart, true);
+    document.getElementById("f5").addEventListener("drop", drop, true);
+    document.getElementById("f5").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("g5").draggable="true";
+    document.getElementById("g5").addEventListener("dragstart", dragStart, true);
+    document.getElementById("g5").addEventListener("drop", drop, true);
+    document.getElementById("g5").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("h5").draggable="true";
+    document.getElementById("h5").addEventListener("dragstart", dragStart, true);
+    document.getElementById("h5").addEventListener("drop", drop, true);
+    document.getElementById("h5").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("a4").draggable="true";
+    document.getElementById("a4").addEventListener("dragstart", dragStart, true);
+    document.getElementById("a4").addEventListener("drop", drop, true);
+    document.getElementById("a4").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("b4").draggable="true";
+    document.getElementById("b4").addEventListener("dragstart", dragStart, true);
+    document.getElementById("b4").addEventListener("drop", drop, true);
+    document.getElementById("b4").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("c4").draggable="true";
+    document.getElementById("c4").addEventListener("dragstart", dragStart, true);
+    document.getElementById("c4").addEventListener("drop", drop, true);
+    document.getElementById("c4").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("d4").draggable="true";
+    document.getElementById("d4").addEventListener("dragstart", dragStart, true);
+    document.getElementById("d4").addEventListener("drop", drop, true);
+    document.getElementById("d4").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("e4").draggable="true";
+    document.getElementById("e4").addEventListener("dragstart", dragStart, true);
+    document.getElementById("e4").addEventListener("drop", drop, true);
+    document.getElementById("e4").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("f4").draggable="true";
+    document.getElementById("f4").addEventListener("dragstart", dragStart, true);
+    document.getElementById("f4").addEventListener("drop", drop, true);
+    document.getElementById("f4").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("g4").draggable="true";
+    document.getElementById("g4").addEventListener("dragstart", dragStart, true);
+    document.getElementById("g4").addEventListener("drop", drop, true);
+    document.getElementById("g4").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("h4").draggable="true";
+    document.getElementById("h4").addEventListener("dragstart", dragStart, true);
+    document.getElementById("h4").addEventListener("drop", drop, true);
+    document.getElementById("h4").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("a3").draggable="true";
+    document.getElementById("a3").addEventListener("dragstart", dragStart, true);
+    document.getElementById("a3").addEventListener("drop", drop, true);
+    document.getElementById("a3").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("b3").draggable="true";
+    document.getElementById("b3").addEventListener("dragstart", dragStart, true);
+    document.getElementById("b3").addEventListener("drop", drop, true);
+    document.getElementById("b3").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("c3").draggable="true";
+    document.getElementById("c3").addEventListener("dragstart", dragStart, true);
+    document.getElementById("c3").addEventListener("drop", drop, true);
+    document.getElementById("c3").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("d3").draggable="true";
+    document.getElementById("d3").addEventListener("dragstart", dragStart, true);
+    document.getElementById("d3").addEventListener("drop", drop, true);
+    document.getElementById("d3").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("e3").draggable="true";
+    document.getElementById("e3").addEventListener("dragstart", dragStart, true);
+    document.getElementById("e3").addEventListener("drop", drop, true);
+    document.getElementById("e3").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("f3").draggable="true";
+    document.getElementById("f3").addEventListener("dragstart", dragStart, true);
+    document.getElementById("f3").addEventListener("drop", drop, true);
+    document.getElementById("f3").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("g3").draggable="true";
+    document.getElementById("g3").addEventListener("dragstart", dragStart, true);
+    document.getElementById("g3").addEventListener("drop", drop, true);
+    document.getElementById("g3").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("h3").draggable="true";
+    document.getElementById("h3").addEventListener("dragstart", dragStart, true);
+    document.getElementById("h3").addEventListener("drop", drop, true);
+    document.getElementById("h3").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("a2").draggable="true";
+    document.getElementById("a2").addEventListener("dragstart", dragStart, true);
+    document.getElementById("a2").addEventListener("drop", drop, true);
+    document.getElementById("a2").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("b2").draggable="true";
+    document.getElementById("b2").addEventListener("dragstart", dragStart, true);
+    document.getElementById("b2").addEventListener("drop", drop, true);
+    document.getElementById("b2").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("c2").draggable="true";
+    document.getElementById("c2").addEventListener("dragstart", dragStart, true);
+    document.getElementById("c2").addEventListener("drop", drop, true);
+    document.getElementById("c2").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("d2").draggable="true";
+    document.getElementById("d2").addEventListener("dragstart", dragStart, true);
+    document.getElementById("d2").addEventListener("drop", drop, true);
+    document.getElementById("d2").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("e2").draggable="true";
+    document.getElementById("e2").addEventListener("dragstart", dragStart, true);
+    document.getElementById("e2").addEventListener("drop", drop, true);
+    document.getElementById("e2").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("f2").draggable="true";
+    document.getElementById("f2").addEventListener("dragstart", dragStart, true);
+    document.getElementById("f2").addEventListener("drop", drop, true);
+    document.getElementById("f2").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("g2").draggable="true";
+    document.getElementById("g2").addEventListener("dragstart", dragStart, true);
+    document.getElementById("g2").addEventListener("drop", drop, true);
+    document.getElementById("g2").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("h2").draggable="true";
+    document.getElementById("h2").addEventListener("dragstart", dragStart, true);
+    document.getElementById("h2").addEventListener("drop", drop, true);
+    document.getElementById("h2").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("a1").draggable="true";
+    document.getElementById("a1").addEventListener("dragstart", dragStart, true);
+    document.getElementById("a1").addEventListener("drop", drop, true);
+    document.getElementById("a1").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("b1").draggable="true";
+    document.getElementById("b1").addEventListener("dragstart", dragStart, true);
+    document.getElementById("b1").addEventListener("drop", drop, true);
+    document.getElementById("b1").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("c1").draggable="true";
+    document.getElementById("c1").addEventListener("dragstart", dragStart, true);
+    document.getElementById("c1").addEventListener("drop", drop, true);
+    document.getElementById("c1").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("d1").draggable="true";
+    document.getElementById("d1").addEventListener("dragstart", dragStart, true);
+    document.getElementById("d1").addEventListener("drop", drop, true);
+    document.getElementById("d1").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("e1").draggable="true";
+    document.getElementById("e1").addEventListener("dragstart", dragStart, true);
+    document.getElementById("e1").addEventListener("drop", drop, true);
+    document.getElementById("e1").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("f1").draggable="true";
+    document.getElementById("f1").addEventListener("dragstart", dragStart, true);
+    document.getElementById("f1").addEventListener("drop", drop, true);
+    document.getElementById("f1").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("g1").draggable="true";
+    document.getElementById("g1").addEventListener("dragstart", dragStart, true);
+    document.getElementById("g1").addEventListener("drop", drop, true);
+    document.getElementById("g1").addEventListener("dragover", allowDrop, true);
+    
+    document.getElementById("h1").draggable="true";
+    document.getElementById("h1").addEventListener("dragstart", dragStart, true);
+    document.getElementById("h1").addEventListener("drop", drop, true);
+    document.getElementById("h1").addEventListener("dragover", allowDrop, true);
+    
+}
+
+function dragStart(event) {
+    //console.log("Started to drag the p element " + event.target.id);
+    event.dataTransfer.setData("Text", event.target.id);
+    //document.getElementById(event.target.id).style.borderWidth="0pt 0pt 0pt 0pt";
+}
+
+function dragging(event) {
+    //console.log("The p element is being dragging..");
+}
+
+function allowDrop(event) {
+    //console.log("allowDrop");
+    event.preventDefault();
+}
+
+function drop(event) {
+    //console.log("drop");
+    event.preventDefault();
+    var data = event.dataTransfer.getData("Text");
+    document.getElementById(event.target.id).innerHTML = document.getElementById(data).innerHTML;
+    document.getElementById(data).innerHTML = "";
+}
+
+function dragEnter(event) {
+    //console.log("dragEnter");
+}
+
+function dragLeave(event) {
+  //console.log("dragLeave");
 }
 
 function resetBoard(){
@@ -184,3 +536,5 @@ function resetBoardChess(){
     document.getElementById("h1").innerHTML="♖";
     
 }
+
+
