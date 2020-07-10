@@ -16,14 +16,14 @@
 					<tbody>
 						<tr>
 							<td style="width: 50pt">8</td>
-							<td id="a8" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 1pt">♜</td>
-							<td id="b8" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt">♞</td>
-							<td id="c8" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt">♝</td>
-							<td id="d8" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt">♛</td>
-							<td id="e8" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt">♚</td>
-							<td id="f8" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt">♝</td>
-							<td id="g8" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt">♞</td>
-							<td id="h8" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 1pt 0pt 0pt">♜</td>
+							<td id="a8" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 1pt"></td>
+							<td id="b8" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt"></td>
+							<td id="c8" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt"></td>
+							<td id="d8" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt"></td>
+							<td id="e8" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt"></td>
+							<td id="f8" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt"></td>
+							<td id="g8" class="white-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 0pt 0pt 0pt"></td>
+							<td id="h8" class="black-cell" style="border-collapse: collapse; border-color: black; border-style: solid; border-width: 1pt 1pt 0pt 0pt"></td>
 						</tr>
 						<tr>
 							<td style="width: 50pt">7</td>
@@ -120,7 +120,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-12" align="center">
-				<button>Reset</button>
+				<button id="resetBoardButton">Reset</button>
 			</div>
 		</div>
 		<%@include file="layouts/footer.jsp"%>

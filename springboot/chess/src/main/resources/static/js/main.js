@@ -6,22 +6,37 @@
 
 console.log('Listen on ChessBoard');
 
+initialBoard();
+
 document.getElementById("board").addEventListener("click", selectCell, true);
 
-function selectCell(event) {
+document.getElementById("resetBoardButton").addEventListener('click',function(){
+    resetBoard();
+});
+
+function initialBoard() {
+    resetBoard();
+}
+
+function selectCell(event){
     console.log('cell:' + event.target.id);
-
     var cell = document.getElementById(event.target.id);
-
     console.log(cell.innerHTML.trim());
-
     resetBoardBackground();
+    cell.style.backgroundColor = "rgb(236,119,22)"; 
+}
 
-    cell.style.backgroundColor = "rgb(236,119,22)";
+function initialBoard(){
+    resetBoard();
+}
+
+function resetBoard(){
+    resetBoardBackground();
+    resetBoardChess();
 }
 
 function resetBoardBackground() {
-    console.log('reset board background');
+    //console.log('reset board background');
     document.getElementById("a8").style.backgroundColor = "#fff";
     document.getElementById("b8").style.backgroundColor = "#C0C0C0";
     document.getElementById("c8").style.backgroundColor = "#fff";
@@ -96,5 +111,76 @@ function resetBoardBackground() {
 }
 
 function resetBoardChess(){
+    document.getElementById("a8").innerHTML="♜";
+    document.getElementById("b8").innerHTML="♞";
+    document.getElementById("c8").innerHTML="♝";
+    document.getElementById("d8").innerHTML="♛";
+    document.getElementById("e8").innerHTML="♚";
+    document.getElementById("f8").innerHTML="♝";
+    document.getElementById("g8").innerHTML="♞";
+    document.getElementById("h8").innerHTML="♜";
+    
+    document.getElementById("a7").innerHTML="♟";
+    document.getElementById("b7").innerHTML="♟";
+    document.getElementById("c7").innerHTML="♟";
+    document.getElementById("d7").innerHTML="♟";
+    document.getElementById("e7").innerHTML="♟";
+    document.getElementById("f7").innerHTML="♟";
+    document.getElementById("g7").innerHTML="♟";
+    document.getElementById("h7").innerHTML="♟";
+    
+    document.getElementById("a6").innerHTML="";
+    document.getElementById("b6").innerHTML="";
+    document.getElementById("c6").innerHTML="";
+    document.getElementById("d6").innerHTML="";
+    document.getElementById("e6").innerHTML="";
+    document.getElementById("f6").innerHTML="";
+    document.getElementById("g6").innerHTML="";
+    document.getElementById("h6").innerHTML="";
+    
+    document.getElementById("a5").innerHTML="";
+    document.getElementById("b5").innerHTML="";
+    document.getElementById("c5").innerHTML="";
+    document.getElementById("d5").innerHTML="";
+    document.getElementById("e5").innerHTML="";
+    document.getElementById("f5").innerHTML="";
+    document.getElementById("g5").innerHTML="";
+    document.getElementById("h5").innerHTML="";
+    
+    document.getElementById("a4").innerHTML="";
+    document.getElementById("b4").innerHTML="";
+    document.getElementById("c4").innerHTML="";
+    document.getElementById("d4").innerHTML="";
+    document.getElementById("e4").innerHTML="";
+    document.getElementById("f4").innerHTML="";
+    document.getElementById("g4").innerHTML="";
+    document.getElementById("h4").innerHTML="";
+    
+    document.getElementById("a3").innerHTML="";
+    document.getElementById("b3").innerHTML="";
+    document.getElementById("c3").innerHTML="";
+    document.getElementById("d3").innerHTML="";
+    document.getElementById("e3").innerHTML="";
+    document.getElementById("f3").innerHTML="";
+    document.getElementById("g3").innerHTML="";
+    document.getElementById("h3").innerHTML="";
+    
+    document.getElementById("a2").innerHTML="♙";
+    document.getElementById("b2").innerHTML="♙";
+    document.getElementById("c2").innerHTML="♙";
+    document.getElementById("d2").innerHTML="♙";
+    document.getElementById("e2").innerHTML="♙";
+    document.getElementById("f2").innerHTML="♙";
+    document.getElementById("g2").innerHTML="♙";
+    document.getElementById("h2").innerHTML="♙";
+    
+    document.getElementById("a1").innerHTML="♖";
+    document.getElementById("b1").innerHTML="♘";
+    document.getElementById("c1").innerHTML="♗";
+    document.getElementById("d1").innerHTML="♕";
+    document.getElementById("e1").innerHTML="♔";
+    document.getElementById("f1").innerHTML="♗";
+    document.getElementById("g1").innerHTML="♘";
+    document.getElementById("h1").innerHTML="♖";
     
 }
