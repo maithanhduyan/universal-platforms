@@ -6,8 +6,17 @@
 
 console.log('Listen on ChessBoard');
 /*----------------------------------------------------------------------------*/
-let moveHistories= [];
-
+let moveHistories = [];
+let boardPosition = ["a8","b8","c8","d8","e8","f8","g8","h8",//
+                     "a7","b7","c7","d7","e7","f7","g7","h7",//
+                     "a6","b6","c6","d6","e6","f6","g6","h6",//
+                     "a5","b5","c5","d5","e5","f5","g5","h5",//
+                     "a4","b4","c4","d4","e4","f4","g4","4",//
+                     "a3","b3","c3","d3","e3","f3","g3","h3",//
+                     "a2","b2","c2","d2","e2","f2","g2","h2",//
+                     "a1","b1","c1","d1","e1","f1","g1","h1",//
+    ];
+let oldCellSelected = "";
 /*----------------------------------------------------------------------------*/
 initialBoard();
 
@@ -20,17 +29,25 @@ document.getElementById("resetBoardButton").addEventListener('click',function(){
     resetBoard();
 });
 
+
+document.getElementById("moveHistory").innerHTML = "...";
+
 function initialBoard() {
     resetBoard();
     initEvent();
 }
 
+function displayHistory(){
+    document.getElementById("moveHistory").innerHTML = "" + moveHistories;
+}
+
 function selectCell(event){
-    console.log('cell:' + event.target.id);
-    var cell = document.getElementById(event.target.id);
-    console.log(cell.innerHTML.trim());
-    resetBoardBackground();
-    cell.style.backgroundColor = "rgb(236,119,22)"; 
+    document.getElementById(event.target.id).classList.add("selected");
+    if(oldCellSelected !== ""){
+        document.getElementById(oldCellSelected).classList.remove("selected");
+    }
+    //resetBoardBackground();
+    oldCellSelected = event.target.id;
 }
 
 // Drag event
@@ -374,11 +391,14 @@ function allowDrop(event) {
 }
 
 function drop(event) {
-    //console.log("drop");
     event.preventDefault();
     var data = event.dataTransfer.getData("Text");
     document.getElementById(event.target.id).innerHTML = document.getElementById(data).innerHTML;
     document.getElementById(data).innerHTML = "";
+    var move = document.getElementById(event.target.id).innerHTML+data +"→"+ event.target.id;
+    moveHistories.push(move);
+    console.log("move: "+ move);
+    displayHistory();
 }
 
 function dragEnter(event) {
@@ -404,6 +424,8 @@ function screenResize(){
 function resetBoard(){
     resetBoardBackground();
     resetBoardChess();
+    moveHistories = [];
+    document.getElementById("moveHistory").innerHTML = "";
 }
 
 function resetBoardBackground() {
