@@ -5,10 +5,16 @@
 'use strict';
 
 console.log('Listen on ChessBoard');
+/*----------------------------------------------------------------------------*/
+let moveHistories= [];
 
+/*----------------------------------------------------------------------------*/
 initialBoard();
 
 document.getElementById("board").addEventListener("click", selectCell, true);
+
+document.getElementsByTagName("body")[0].setAttribute("onresize","screenResize()");
+document.getElementById("board").setAttribute("onresize","screenResize()");
 
 document.getElementById("resetBoardButton").addEventListener('click',function(){
     resetBoard();
@@ -28,6 +34,7 @@ function selectCell(event){
 }
 
 // Drag event
+/*----------------------------------------------------------------------------*/
 function initEvent(){
     document.getElementById("a8").draggable="true";
     document.getElementById("a8").addEventListener("dragstart", dragStart, true);
@@ -382,6 +389,18 @@ function dragLeave(event) {
   //console.log("dragLeave");
 }
 
+function screenResize(){
+    var w = window.outerWidth;
+    var h = window.outerHeight;
+    if(w < 992){
+        document.getElementById("board").style.width= (h-100) + "px";
+        document.getElementById("board").style.height= (w-100) + "px";
+    }
+    console.clear();
+    console.log("Screen width: "+ w +"   Screen height: " + h);
+    
+}
+/*----------------------------------------------------------------------------*/
 function resetBoard(){
     resetBoardBackground();
     resetBoardChess();
@@ -536,5 +555,5 @@ function resetBoardChess(){
     document.getElementById("h1").innerHTML="♖";
     
 }
-
+/*----------------------------------------------------------------------------*/
 
