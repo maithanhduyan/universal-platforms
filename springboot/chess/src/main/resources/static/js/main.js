@@ -399,7 +399,7 @@ function drop(event) {
     moveHistories.push(move);
     console.log("move: "+ move);
     displayHistory();
-    moveChess(move);
+    onMoveChess(move);
 }
 
 function dragEnter(event) {
@@ -579,14 +579,14 @@ function resetBoardChess(){
     
 }
 /*----------------------------------------------------------------------------*/
-window.onload=init;
+window.onload = initSocket;
 
 let socket = null;
 let stompClient = null;
 let username = null;
 let alias = ["John", "Tom", "Epictetus", "Sa", "An", "Tuan", "Minh", "Lan", "Jerry"]; 
 
-function init(){
+function initSocket(){
     socket = new SockJS('/ws');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, onConnected, onError);
@@ -631,7 +631,7 @@ function onMessageReceived(payload) {
     console.log(message.sender + ": " + message.content);
 }
 
-function addPlayer(){
+function onAddPlayer(){
     // add player to the server
     let playerName = username;
     stompClient.send("/app/chess.addPlayer", {}, JSON.stringify({
@@ -640,7 +640,7 @@ function addPlayer(){
     }))
 }
 
-function moveChess(chess){
+function onMoveChess(chess){
     stompClient.send("/app/chess.move", {}, JSON.stringify({
         player : username,
         type : 'MOVE',
@@ -651,5 +651,25 @@ function moveChess(chess){
 function onServerResponse(payload){
     let message = JSON.parse(payload.body);
     console.log(message.player + ": " + message.content);
+    moveChessOnBoard(message.content);
 }
+/*----------------------------------------------------------------------------*/
 
+// Board moving chess controller
+function moveChessOnBoard(message){
+    let chess = message.substr(0, 1);;
+    let chessMoveFrom = message.substr(1, 2);
+    let chessMoveTo = message.substr(4, 2);
+    
+    console.log("Chess: " + chess + "move from: " + chessMoveFrom + "→ Move to: " + chessMoveTo);
+
+    // Server Check available 
+    
+    // Server control board move a chess
+    document.getElementById(chessMoveFrom).innerHTML = "";
+    document.getElementById(chessMoveTo).innerHTML = chess;
+    
+    // Client turn allow
+    
+
+}

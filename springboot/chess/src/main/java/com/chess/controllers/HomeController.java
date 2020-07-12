@@ -47,6 +47,9 @@ public class HomeController {
     @SendTo("/chess/publicChessRoom")
     public ChessMessageModel moveMessage(@Payload ChessMessageModel chessMessageModel ) {
 	log.info("Move: " + chessMessageModel.getContent());
+	log.info("Computer move : " + "♟b7→b5");
+	chessMessageModel.setContent("♟b7→b5");
+	chessMessageModel.setPlayer("Computer");
 	return chessMessageModel;
     }
     
