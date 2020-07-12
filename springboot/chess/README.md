@@ -8,3 +8,4 @@
 [W3School Boostrap]('https://www.w3schools.com/bootstrap4/default.asp')
 
 [Internet_Computer_Chess_Tournament]('https://en.wikipedia.org/wiki/Internet_Computer_Chess_Tournament')
+[STOMP-WEBSOCKET]('http://jmesnil.net/stomp-websocket/doc/')

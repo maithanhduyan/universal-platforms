@@ -13,7 +13,7 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-lg-10" align="center">
+			<div class="col-lg-12" align="center">
 				<table id="board" class="board">
 					<tbody>
 						<tr>
@@ -139,11 +139,11 @@
 					</tbody>
 				</table>
 			</div>
-			History:
-			<div class="col-lg-2 text-center" align="center" id="moveHistory">
+		</div>
+		<div class="row">
+			<div class="col-lg-12 text-center" align="center" id="moveHistory">
 			</div>
 		</div>
-		
 		<div class="row">
 			<div class="col-sm-12 text-center" align="center">
 				<button id="resetBoardButton">Reset</button>

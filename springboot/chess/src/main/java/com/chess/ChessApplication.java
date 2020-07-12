@@ -1,3 +1,7 @@
+/**
+ * @author Mai Thành Duy An [tiachop0102@gmail.com]
+ * 
+ */
 package com.chess;
 
 import org.springframework.boot.SpringApplication;

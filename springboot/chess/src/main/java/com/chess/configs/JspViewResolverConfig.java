@@ -1,3 +1,7 @@
+/**
+ * @author Mai Thành Duy An [tiachop0102@gmail.com]
+ * 
+ */
 package com.chess.configs;
 
 import org.springframework.beans.factory.annotation.Value;

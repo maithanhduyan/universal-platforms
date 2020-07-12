@@ -1,3 +1,7 @@
+/**
+ * @author Mai Thành Duy An [tiachop0102@gmail.com]
+ * 
+ */
 package com.chess.configs;
 
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +30,13 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	// js
 	registry.addResourceHandler("/js/**") //
 		.addResourceLocations("classpath:/static/js/");
+
+	// websocket
+	registry.addResourceHandler("/stomp-websocket/**") //
+		.addResourceLocations("classpath:/META-INF/resources/webjars/stomp-websocket/2.3.3-1/");
+
+	registry.addResourceHandler("/sockjs-client/**") //
+		.addResourceLocations("classpath:/META-INF/resources/webjars/sockjs-client/1.1.2/");
 
     }
 }

@@ -392,13 +392,14 @@ function allowDrop(event) {
 
 function drop(event) {
     event.preventDefault();
-    var data = event.dataTransfer.getData("Text");
+    let data = event.dataTransfer.getData("Text");
     document.getElementById(event.target.id).innerHTML = document.getElementById(data).innerHTML;
     document.getElementById(data).innerHTML = "";
-    var move = document.getElementById(event.target.id).innerHTML+data +"→"+ event.target.id;
+    let move = document.getElementById(event.target.id).innerHTML+data +"→"+ event.target.id;
     moveHistories.push(move);
     console.log("move: "+ move);
     displayHistory();
+    moveChess(move);
 }
 
 function dragEnter(event) {
@@ -410,14 +411,14 @@ function dragLeave(event) {
 }
 
 function screenResize(){
-    var w = window.outerWidth;
-    var h = window.outerHeight;
+    let w = window.outerWidth;
+    let h = window.outerHeight;
     if(w < 992){
         document.getElementById("board").style.width= (h-100) + "px";
         document.getElementById("board").style.height= (w-100) + "px";
     }
-    console.clear();
-    console.log("Screen width: "+ w +"   Screen height: " + h);
+    //console.clear();
+    //console.log("Screen width: "+ w +"   Screen height: " + h);
     
 }
 /*----------------------------------------------------------------------------*/
@@ -578,4 +579,77 @@ function resetBoardChess(){
     
 }
 /*----------------------------------------------------------------------------*/
+window.onload=init;
+
+let socket = null;
+let stompClient = null;
+let username = null;
+let alias = ["John", "Tom", "Epictetus", "Sa", "An", "Tuan", "Minh", "Lan", "Jerry"]; 
+
+function init(){
+    socket = new SockJS('/ws');
+    stompClient = Stomp.over(socket);
+    stompClient.connect({}, onConnected, onError);
+}
+
+function onConnected() {
+    username = alias[Math.floor(Math.random() * 10)];
+    // Subscribe to the Public Topic
+    stompClient.subscribe('/topic/publicChatRoom', onMessageReceived);
+    
+    // Subscribe to the Public Chess Room
+    stompClient.subscribe('/chess/publicChessRoom', onServerResponse);
+
+    // Tell your username to the server
+    stompClient.send("/app/chat.addUser", {}, JSON.stringify({
+        sender : username,
+        type : 'JOIN'
+    }))
+    
+}
+
+function onError(error) {
+    console.log('Could not connect to WebSocket server. Please refresh this page to try again!');
+}
+
+function sendMessage(input) {
+    var messageContent = input;
+    if(messageContent && stompClient) {
+        var chatMessage = {
+            sender: username,
+            content: messageContent,
+            type: 'CHAT'
+        };
+        console.log('sending...');
+        stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
+        //messageInput.value = '';
+    }
+}
+
+function onMessageReceived(payload) {
+    var message = JSON.parse(payload.body);
+    console.log(message.sender + ": " + message.content);
+}
+
+function addPlayer(){
+    // add player to the server
+    let playerName = username;
+    stompClient.send("/app/chess.addPlayer", {}, JSON.stringify({
+        player : playerName,
+        type : 'JOIN'
+    }))
+}
+
+function moveChess(chess){
+    stompClient.send("/app/chess.move", {}, JSON.stringify({
+        player : username,
+        type : 'MOVE',
+        content: chess
+    }))
+}
+
+function onServerResponse(payload){
+    let message = JSON.parse(payload.body);
+    console.log(message.player + ": " + message.content);
+}
 
