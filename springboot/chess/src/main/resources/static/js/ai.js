@@ -3,7 +3,6 @@ var board, game = new Chess();
 /* The "AI" part starts here */
 
 var minimaxRoot = function (depth, game, isMaximisingPlayer) {
-
     var newGameMoves = game.ugly_moves();
     var bestMove = -9999;
     var bestMoveFound;
@@ -174,9 +173,22 @@ var onDragStart = function (source, piece, position, orientation) {
 
 var makeBestMove = function () {
     var bestMove = getBestMove(game);
-    game.ugly_move(bestMove);
-    board.position(game.fen());
+    // game.ugly_move(bestMove);
+    // board.position(game.fen());
+    // renderMoveHistory(game.history());
+
+    var move = game.ugly_move(bestMove);
+    console.log(move)
+
+    // highlight black's move
+    removeHighlights('black')
+    $board.find('.square-' + move.from).addClass('highlight-black')
+    squareToHighlight = move.to
+
+    // update the board to the new position
+    board.position(game.fen())
     renderMoveHistory(game.history());
+
     if (game.game_over()) {
         alert('Game over');
     }
@@ -227,6 +239,12 @@ var onDrop = function (source, target) {
         return 'snapback';
     }
 
+    // highlight white's move
+    removeHighlights('white')
+    $board.find('.square-' + source).addClass('highlight-white')
+    $board.find('.square-' + target).addClass('highlight-white')
+    console.log(move);
+
     renderMoveHistory(game.history());
     window.setTimeout(makeBestMove, 250);
 };
@@ -270,7 +288,17 @@ var greySquare = function (square) {
     squareEl.css('background', background);
 };
 
+var $board = $('#board');
+var squareToHighlight = null
+var squareClass = 'square-55d63'
+
+function removeHighlights(color) {
+    $board.find('.' + squareClass).removeClass('highlight-' + color)
+}
+
 function onMoveEnd() {
+    console.log('AI: onMoveEnd ')
+
     $board.find('.square-' + squareToHighlight).addClass('highlight-black')
 }
 
@@ -281,6 +309,8 @@ var cfg = {
     onDrop : onDrop,
     onMouseoutSquare : onMouseoutSquare,
     onMouseoverSquare : onMouseoverSquare,
+    onMoveEnd : onMoveEnd,
     onSnapEnd : onSnapEnd
 };
+
 board = ChessBoard('board', cfg);
