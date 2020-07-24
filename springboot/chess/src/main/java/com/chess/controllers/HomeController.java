@@ -25,6 +25,11 @@ public class HomeController {
     public String viewHomePage() {
 	return "/home";
     }
+    
+    @RequestMapping("/alpha")
+    public String viewAlphaPage() {
+	return "/alpha";
+    }
 
     @MessageMapping("/chat.sendMessage")
     @SendTo("/topic/publicChatRoom")

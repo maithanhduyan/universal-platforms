@@ -10,7 +10,7 @@ $(document).ready(function() {
 ~~~~
 
 - [Javascript addEventListener]('https://www.w3schools.com/jsref/met_document_addeventlistener.asp')
->document.getElementById("board").addEventListener("click", selectCell,true);
+> document.getElementById("board").addEventListener("click", selectCell,true);
 
 - Javascript dragable
 ~~~~
@@ -65,4 +65,50 @@ function drop(event) {
 
 </body>
 </html>
+~~~~
+
+# Neuroph
+1. Neuron
+The Neuron class has four primary attributes:
+
+inputConnection: weighted connections between Neurons
+inputFunction: specifies weights and vector sums applied to incoming connection data
+transferFunction: specifies weights and vector sums applied to outgoing data
+output: the output value resulting from the application of transferFunctions and inputFunctions to an inputConnection
+Together those four primary attributes establish the behavior:
+>output = transferFunction(inputFunction(inputConnections));
+
+2. Layer
+~~~
+Layer layer = new Layer(); 
+layer.addNeuron(n);
+~~~
+
+- Create Neural Network
+~~~~
+NeuralNetwork ann = new Perceptron(2, 4, 1);
+
+~~~~
+- Create Neural Network with Layer
+~~~~
+NeuralNetwork ann = new NeuralNetwork();   
+Layer layer = new Layer();
+ann.addLayer(0, layer);
+ann.setInputNeurons(layer.getNeurons());
+~~~~
+
+- Add a Neural and Connect
+~~~~
+ann.addLayer(0, inputLayer);    
+ann.addLayer(1, hiddenLayerOne); 
+ConnectionFactory.fullConnect(ann.getLayerAt(0), ann.getLayerAt(1));
+
+~~~~
+
+- The first and last Layer should also be connected:
+~~~~
+ConnectionFactory.fullConnect(ann.getLayerAt(0), 
+  ann.getLayerAt(ann.getLayersCount() - 1), false);
+ann.setOutputNeurons(ann.getLayerAt(
+  ann.getLayersCount() - 1).getNeurons());
 ~~~~
