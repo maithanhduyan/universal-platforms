@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="main-layout (title, styles, mainContent, scripts)">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" th:href="@{img/favicon.ico}" href="img/favicon.ico">
+    <title th:replace="${title}"></title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" media="screen" />
+    <!-- Font Awesome -->
+    <link th:href="@{/font-awesome/css/all.min.css}" rel="stylesheet" media="screen" />
+    <!-- AOS -->
+    <link th:href="@{/aos/aos.css}" rel="stylesheet" media="screen" />
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <!-- STYLES -->
+    <th:block th:replace="${styles} ?: ~{}"></th:block>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="home-nav" th:replace="~{thymeleaf/layouts/navbar :: navbar}">
+        Home Nav
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" data-aos="fade-right">
+                <div th:replace="~{thymeleaf/layouts/sidebar :: sidebar}"></div>
+            </div>
+            <!-- /.col-lg-3 -->
+            <div class="col-lg-9">
+                <div th:insert="${mainContent} ?: ~{}"></div>
+            </div>
+            <!-- /.col-lg-9 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer th:replace="~{thymeleaf/layouts/footer :: footer}">
+        <p>Footer</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script th:src="@{/jquery/jquery.min.js}"></script>
+    <script th:src="@{/jquery.easing/jquery.easing.min.js}"></script>
+    <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/aos/aos.js}"></script>
+    <script th:src="@{/js/main.js}"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <th:block th:insert="${scripts} ?: ~{}"></th:block>
+
+</body>
+
+</html>

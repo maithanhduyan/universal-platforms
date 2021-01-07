@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+.board {
+	text-align: center;
+	border-spacing: 0pt;
+	font-family: 'Arial Unicode MS';
+	border-collapse: collapse;
+	border-color: black;
+	border-style: solid;
+	border-width: 0pt 0pt 0pt 0pt;
+}
+
+.board-footer {
+	width: 10pt;
+	background-color: rgb(122, 35, 39);
+	color: #fff;
+}
+
+.board-sidebar {
+	width: 10pt;
+	background-color: rgb(122, 35, 39);
+	color: #fff;
+}
+
+.white-cell {
+	width: 50pt;
+	height: 50pt;
+	font-size: 45px;
+	background-color: rgb(255, 255, 255);
+}
+
+.black-cell {
+	width: 50pt;
+	height: 50pt;
+	font-size: 45px;
+	background-color: rgb(192, 192, 192);
+}
+.selected{
+	border: 2px solid rgb(236,119,22);
+}
+/* On screens that are 480px  */
+@media screen and (min-width: 480px) {
+	.board {/* 
+		width: 500pt;
+		height: 500pt; */
+	}
+}
+
+/* On screens that are 768px  */
+@media screen and (min-width: 768px) {
+	.board {/* 
+		width: 500pt;
+		height: 500pt; */
+	}
+}
+
+/* On screens that are 992px  */
+@media screen and (min-width: 992px) {
+	.board {/* 
+		width: 500pt;
+		height: 500pt; */
+	}
+}
+
+/* On screens that are 576px  */
+@media screen and (min-width: 768px) {
+	.board {/* 
+		width: 500pt;
+		height: 500pt; */
+	}
+}
+
+footer {
+	border-top: 1px;
+	border-top-color: #c0c0c0;
+}
