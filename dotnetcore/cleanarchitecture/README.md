@@ -1,16 +1,41 @@
-1 -Core
-~~~~
+# [Clean Architecture](https://github.com/ardalis/CleanArchitecture)
+
+#### src
+1 - Core
+
+```
 dotnet new classlib -n Core
-~~~~
--Infrastructure
-~~~~
+```
+
+2 - Infrastructure
+
+```
 dotnet new classlib -n Infrastructure
-~~~~
--SharedKernel
-~~~~
+```
+
+3 - SharedKernel
+
+```
 dotnet new classlib -n SharedKernel
-~~~~
--Web
-~~~~
+```
+
+4 - Web
+
+```
 dotnet new mvc -n Web
+```
+
+### tests
+
+```
+dotnet test
+```
+
+Create solution
+~~~~
+dotnet new sln -n cleanarchitecture
+~~~~
+Add project to solution
+~~~~
+dotnet sln cleanarchitecture.sln add .\src\Core\Core.csproj  .\src\Infrastructure\Infrastructure.csproj .\src\SharedKernel\SharedKernel.csproj .\src\Web\Web.csproj
 ~~~~
