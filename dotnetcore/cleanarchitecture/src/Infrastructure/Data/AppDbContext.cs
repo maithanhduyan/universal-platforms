@@ -2,7 +2,7 @@ using System;
 
 namespace CleanArchitecture.Infrastructure.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext 
     {
     }
 }
